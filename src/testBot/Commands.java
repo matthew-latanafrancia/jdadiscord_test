@@ -32,8 +32,26 @@ public class Commands extends ListenerAdapter {
                 embed.clear();
             }
 
-            if (args[0].equalsIgnoreCase(prefix + "readMe")){
-                event.getChannel().sendMessage("This is a pretty sick test isn't it").queue();
+            if (args[0].equalsIgnoreCase(prefix + "help")){
+                EmbedBuilder embed = new EmbedBuilder();
+                embed.setTitle("Command List");
+                embed.setColor(Color.RED);
+                embed.addField("!shinyhunterdestroyer", "displays fun weird youtuber stuffs", false);
+                embed.addField("!help", "you need help", false);
+                embed.setFooter("Bot created by Dez", event.getGuild().getOwner().getUser().getAvatarUrl());
+                event.getChannel().sendMessage(embed.build()).queue();
+            }
+        }
+        else {
+            if(args[0].equalsIgnoreCase("Im") || args[0].equalsIgnoreCase("I'm")){
+               String str = "Hi";
+                for(int i = 1; args.length > i; i++){
+                    str = str + " " + args[i];
+                }
+
+                str = str + ", I'm JDAtestBot!";
+
+                event.getChannel().sendMessage(str).queue();
             }
         }
 
