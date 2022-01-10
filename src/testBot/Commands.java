@@ -44,6 +44,10 @@ public class Commands extends ListenerAdapter {
         }
         else {
             if(args[0].equalsIgnoreCase("Im") || args[0].equalsIgnoreCase("I'm")){
+
+                 /*
+                 This command is a haha funny dad joke
+                  */
                String str = "Hi";
                 for(int i = 1; args.length > i; i++){
                     str = str + " " + args[i];
