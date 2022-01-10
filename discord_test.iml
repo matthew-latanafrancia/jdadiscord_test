@@ -10,7 +10,7 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Downloads/JDA-4.4.0_352-withDependencies.jar!/" />
+          <root url="jar://$MODULE_DIR$/JDA-4.4.0_352-withDependencies.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

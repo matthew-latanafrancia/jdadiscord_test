@@ -15,19 +15,26 @@ public class Commands extends ListenerAdapter {
     public void onGuildMessageReceived(@NotNull GuildMessageReceivedEvent event){
         String[] args = event.getMessage().getContentRaw().split(" ");
 
-        if(args[0].equalsIgnoreCase(prefix + "shinyhunterdestroyer")){
-            //example line to show how to send a message in reply to a command
-            //event.getChannel().sendMessage("This is a pretty sick test isn't it.").queue();
+        if(args[0].startsWith(prefix)) {
 
-            EmbedBuilder embed = new EmbedBuilder();
-            embed.setTitle("ShinyHunterDestroyer", "https://www.youtube.com/shinyhunterdestroyer");
-            embed.setDescription("Sometimes he uploads most of the time he doesn't");
-            embed.setColor(Color.CYAN);
-            embed.addField("Current Anime", "Digimon: Ghost Game \n Digimon Adventures 02 \n Pokemon (2019)", false);
-            embed.addField("Embed Field 2", "This is the content of Field 2", false);
-            embed.setFooter("Bot created by Dez", event.getGuild().getOwner().getUser().getAvatarUrl());
-            event.getChannel().sendMessage(embed.build()).queue();
-            embed.clear();
+            if (args[0].equalsIgnoreCase(prefix + "shinyhunterdestroyer")) {
+                //example line to show how to send a message in reply to a command
+                //event.getChannel().sendMessage("This is a pretty sick test isn't it.").queue();
+
+                EmbedBuilder embed = new EmbedBuilder();
+                embed.setTitle("ShinyHunterDestroyer", "https://www.youtube.com/shinyhunterdestroyer");
+                embed.setDescription("Sometimes he uploads most of the time he doesn't");
+                embed.setColor(Color.CYAN);
+                embed.addField("Current Anime", "Digimon: Ghost Game \n Digimon Adventures 02 \n Pokemon (2019)", false);
+                embed.addField("Embed Field 2", "This is the content of Field 2", false);
+                embed.setFooter("Bot created by Dez", event.getGuild().getOwner().getUser().getAvatarUrl());
+                event.getChannel().sendMessage(embed.build()).queue();
+                embed.clear();
+            }
+
+            if (args[0].equalsIgnoreCase(prefix + "readMe")){
+                event.getChannel().sendMessage("This is a pretty sick test isn't it").queue();
+            }
         }
 
     }
