@@ -17,7 +17,7 @@ public class mainBotClass {
 
     public static void main(String[] args) throws LoginException {
         JDABuilder builder = JDABuilder.createDefault("OTI5ODUzNTI1NDA2NjY2NzYy.YdtXlA.OQ6zaNC-PZj6-9CvVcLa37wgWEo");
-        builder.setActivity(Activity.playing("i love pikachu so so much"));
+        builder.setActivity(Activity.playing("lmao xDDDDDDDD"));
         builder.setStatus(OnlineStatus.ONLINE);
         builder.addEventListeners(new Commands());
         //builder.setChunkingFilter(ChunkingFilter.ALL);  //lets the bot see all
