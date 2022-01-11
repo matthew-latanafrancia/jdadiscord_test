@@ -16,8 +16,8 @@ public class mainBotClass {
     public static JDA jda;
 
     public static void main(String[] args) throws LoginException {
-        JDABuilder builder = JDABuilder.createDefault("OTI5ODUzNTI1NDA2NjY2NzYy.YdtXlA.OQ6zaNC-PZj6-9CvVcLa37wgWEo");
-        builder.setActivity(Activity.playing("lmao xDDDDDDDD"));
+        JDABuilder builder = JDABuilder.createDefault("INSERT_TOKEN_HERE");
+        builder.setActivity(Activity.playing("test status"));
         builder.setStatus(OnlineStatus.ONLINE);
         builder.addEventListeners(new Commands());
         //builder.setChunkingFilter(ChunkingFilter.ALL);  //lets the bot see all
